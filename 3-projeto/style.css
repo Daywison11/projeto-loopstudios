@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+/*fontes
+font-family: 'Alata', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+ */
+ 
+ :root{
+     --cinzaE: hsl(0, 0%, 55%);
+     --cinzaME:hsl(0, 0%, 41%);
+ }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+}
+ /*CABEÇALHO*/
+.header{
+    height: 450px;
+    background-image: url(images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    padding: 50px;
+    padding-bottom: 0px;
+    color: white;
+    margin-bottom: 100px;
+}
+.header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header nav .menu ,.header nav .menu a{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    color: white;
+    margin-right: 20px;
+    font-size: 16;
+    cursor: pointer;
+    
+}
+.header nav .menu a:hover{
+    text-decoration: underline;
+    transition: ease 0.5;
+}
+.header nav > a >img{
+    width: 150px;
+}
+.header h1{
+    margin-top: 100px;
+    margin-left: 10px;
+    width: 330px;
+    height: 120px;
+    border:1px solid white;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    text-align: left;
+    padding: 30px;
+    font-size: 45px;
+}
+/*Botao do menu hamburguer*/
+
+.hamburguer{
+    height: 35px;
+    width: 45px;
+    background-color:rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+.hamburguer nav label ,#top ,#meio ,#baixo{
+    width:40px;
+    height: 2px;
+    background-color: white;
+    z-index: 2;
+}
+#top{
+    position: absolute;
+    top:25px;
+    transition: ease-in-out 0.5s;
+}
+#meio{
+    position: absolute;
+    top: 35px;
+    transition: ease-in-out 0.5s;
+}
+#baixo{
+    position: absolute;
+    top: 45px;
+    transition: ease-in-out 0.5s;
+}
+#toggle{
+    opacity: 0;
+    display: none;
+}
+#toggle:checked + .hamburguer #top{
+    transform: rotate(45deg);
+    top: 35px;
+}
+
+#toggle:checked + .hamburguer #meio{
+    transform: translate(-50px);
+    visibility: hidden;
+    opacity: 0;
+}
+#toggle:checked + .hamburguer #baixo{
+    transform: rotate(-45deg);
+    top: 35px;
+}
+.hamburguer{
+    display: none;
+}
+
+
+
+/* CONTEUDO TOTAL */
+
+
+.main{
+    max-width: 80%;
+    margin: auto;
+} 
+
+/*PRIMEIRO CONTAINE*/
+.main .one-container{
+    display: flex;
+    margin-bottom: 80px;
+}
+.main .one-container img{
+    max-width: 600px;
+    z-index: 0;
+}
+
+.main .one-container .text-container{
+    position: absolute;
+    background-color: white;
+    max-width:350px;
+    max-height:220px;
+    z-index: 1;
+    padding: 50px 0px 0px 50px;
+    margin-top: 188px;
+    left:570px;
+    overflow: hidden;
+
+}
+
+.main .one-container h1{
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.main .one-container p{
+    font-size: 13px;
+    color: var(--cinzaME);
+}
+
+/*CONTAINER SECTION*/
+
+.title-imgs{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+.title-imgs > button{
+    height: 30px;
+    width: 110px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: black;
+    cursor: pointer;
+    
+}
+.title-imgs > button:hover{
+    background-color: black;
+    color: white;
+}
+
+.title-imgs > h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.container-imgs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+}
+
+.container-imgs .img{
+    margin-bottom: 10px;
+}
+
+footer{
+    margin-top: 100px;
+    background-color: black;
+    color: white;
+}
+footer .principal{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 0px 30px;
+    letter-spacing: 15px;
+}
+footer .principal > img{
+    max-width: 150px;
+    max-block-size: 20px;
+}
+footer .principal a{
+    text-decoration: none;
+}
+footer .secund ul{
+    padding: 10px;
+    list-style: none;
+    margin-left: 10px;
+    display: flex;
+}
+footer .secund ul li{
+    margin: 10px;
+    font-size: 13px;
+}
+footer .secund ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+@media (max-width:1277px){
+    .container-imgs .img{
+        width: 193px;
+        height: 390px;
+        margin:4px;
+        overflow: hidden;
+        
+    }
+}
+@media (max-width:1022px){
+    .container-imgs .img{
+        width: 163px;
+        height: 330px;
+        margin:4px;
+        overflow: hidden;
+        
+    }
+}
+@media (max-width:871px){
+    .header{
+        padding: 15px;
+    }
+    .header nav .menu ,.header nav .menu a{
+        margin-right: 10px;
+        font-size: 16;   
+        
+    }
+
+    .header h1{
+        margin-top: 60px;
+        margin-left: 10px;
+        width: 250px;
+        height: 80px;
+        border:1px solid white;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 100;
+        text-align: left;
+        padding: 20px;
+        font-size: 30px;
+    }
+    main .one-container{
+        display: flex;
+        margin-bottom: 80px;
+        overflow: hidden;
+    }
+    .main .one-container img{
+        max-width: 500px;
+        max-height: 350px;
+        z-index: 0;
+    }
+    .main .one-container .text-container{
+        position: absolute;
+        background-color: white;
+        max-width:300px;
+        max-height:180px;
+        z-index: 1;
+        padding: 50px 0px 0px 50px;
+        margin-top: 147px;
+        left:440px;
+        overflow: hidden;
+    }
+    .main .one-container h1{
+        font-size: 25px;
+        font-weight: 100;
+    }
+    .main .one-container p{
+        font-size: 11px;
+    }
+
+    .container-imgs .img{
+        width: 133px;
+        height: 300px;
+        margin:4px;
+        overflow: hidden;   
+    }
+}
+@media (max-width:721px){
+    .header{
+        background-image: url(images/desktop/image-hero.jpg);
+        margin-bottom:0px;
+        background-size:721px ;
+        padding-bottom: 0px;
+    }
+    .main{
+        margin: auto;
+        max-width: 95%;
+    } 
+    .main .one-container{
+        display: block;
+        margin-bottom: 0px;
+        margin: auto;
+
+    }
+    .main .one-container img{
+        overflow: hidden;
+       width: 100%;
+       height: 380px;
+       max-width: none;
+       max-height: none;
+       display:block;
+       margin:0;
+       z-index: 1;
+    }
+    .main .one-container .text-container{
+        position: relative;
+        display: block;
+        max-width: none;
+        margin: 0px 0px 50px 0px;
+        left: 0;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    
+    }
+    .main .one-container h1{
+        text-align: center;
+        font-size: 25px;
+
+    }
+
+}
+@media (max-width: 621px){
+    .header{
+        padding: 10px;
+    }
+    .main .one-container img{
+        height: 300px;
+        z-index: 0;
+    }
+    .container-imgs{
+        display: block;
+    }
+    .container-imgs .img{
+        margin-bottom: 0px;
+        width: 100%;
+        margin-bottom: -15%;
+    }
+    .container-imgs .img img{
+        width: 100%;
+    }
+    .main{
+        max-width: 90%;
+        margin: auto;
+    }
+    footer .principal > img{
+        max-width: 120px;
+        max-block-size: 20px;
+    }
+    footer .principal a{
+        text-decoration: none;
+        max-width: 30px;
+    }
+    footer .secund ul li{
+        margin: 5px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 521px){
+    .header nav{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0%;
+        transition:ease-in-out 0.5s;
+
+    }
+    .menu{
+        visibility:hidden;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        font-size: 20px;
+        top: -100px;
+        text-transform: uppercase;
+        
+    }
+    .menu>li >a{
+        font-family:'Josefin Sans', sans-serif;
+        font-weight: 100;
+
+    }
+    .livisi{
+        visibility: visible;
+        overflow: hidden;
+    }
+    .hamburguer{
+        display: flex;
+        position: absolute;
+        z-index: 13;
+        top: 20px;
+        left: 80%;
+        padding: 10px;
+    }
+    .header nav .menu li{
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .header nav img{
+        position: absolute;
+        z-index: 10;
+        left: 20px;
+        top:40px;
+    }
+    .visible , .visible > ul{
+        visibility: visible;
+        transition: linear 0.6s;
+        display: block;
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0%;
+        z-index: 5;
+    }
+    .container-imgs .img{
+        width: 100%;
+    }
+    .container-imgs .img img{
+        width: 100%;
+        margin-bottom: -20%;
+    }
+}
+@media (max-width: 401px){
+    .header{
+        background-image: url(images/mobile/image-hero.jpg);
+        background-size:100%;
+        height: 100vh;
+    }
+    .header h1{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50% , -50%);
+       z-index: 0 ;
+       font-size: 40px;
+       font-weight: 100;
+       height: 170px;
+       width: 80%;
+       margin: auto;
+       padding-top: 0;
+       padding: 20px;
+
+    }
+    .main{
+        max-width: 90%;
+    }
+
+    .main .one-container img{
+        max-width: none;
+        max-width: 100%;
+        height: 100%;
+        margin: auto;
+        background-size: cover;
+    }
+    .main .one-container{
+        display: block;
+        height: auto;
+        margin-bottom: 0px;
+        margin: auto;
+    }
+    .main .one-container .text-container{
+        position: relative;
+        display: block;
+        max-width: 80%;
+        margin: 0px auto;
+        left: 0;
+        padding: 5px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    
+    }
+    .main .one-container p{
+        font-size: 14px;
+        text-align: center;
+
+        color: var(--cinzaME);
+    }
+    .title-imgs{
+        display: block;
+        margin:auto;
+        text-align: center;
+        height: 100px;
+        margin-bottom: 30px;
+    }
+    .title-imgs > h2 {
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 30px;
+        letter-spacing:5px;
+        font-weight: 100;
+        margin-bottom: 23px;
+    }
+    
+    .container-imgs{
+        display: block;
+        margin: 0;
+    }
+    .container-imgs img{
+        width: 100%;
+        max-height: 240px ;
+    }
+    .container-imgs .img{
+        margin-bottom: -10px;
+        max-height: 240px;
+        height: 240px;
+        overflow: hidden;
+        margin-bottom: -110px;
+
+    }
+    footer{
+        display: flex;
+    }
+    footer .principal{
+        padding:15px 0px 15px 0px;
+        margin: auto;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .principal > img{
+        padding: 0%;
+        max-width: 160px;
+        order: 0;
+        max-block-size: 20px;
+    }
+    footer .principal a img{
+        margin-top:220px;
+        order: 4;
+        margin-left: 505;
+    }
+    
+    footer .secund ul{
+        text-align: center;
+        z-index: 100;
+        order:2;
+        position: absolute;
+        margin-top: 50px;
+        right: 50%;
+        transform: translate(50%);
+        order: inherit;
+        display: flex;
+        flex-direction: column;
+    }
+    footer .secund ul li{
+        font-size: 16px;
+        text-decoration: none;
+        list-style: none;
+    }
+    footer .secund ul li a{
+        text-decoration: none;
+        color: white;
+        
+    }
+}

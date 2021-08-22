@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Loopstudios landing page</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <header class="header">
+        <nav id="menu">
+            <a href="index.html"><img src="images/logo.svg" alt="logo" id="logo"></a>
+            <ul class="menu" id="lista">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="toggle" class="hamburguer" onclick="clique()" id="botao">
+                <div id="top"></div>
+                <div id="meio"></div>
+                <div id="baixo"></div>
+            </label>
+        </nav>
+        <h1>Immersive experiences that delive</h1>
+    </header>
+    <main class="main">
+        <article class="one-container">
+            <img src="images/desktop/image-interactive.jpg" alt="interactive">
+            <div class="text-container">
+                <h1>The leader in interactive VR</h1>
+                <p>
+                    Founded in 2011, Loopstudios has been producing world-class virtual reality 
+                    projects for some of the best companies around the globe. Our award-winning 
+                    creations have transformed businesses through digital experiences that bind 
+                    to their brand. 
+                </p>
+            </div>
+        </article>
+        <div class="seg-contaier">
+            <section class="title-imgs">
+                <h2>Our creations</h2>
+                <button>See all</button>
+            </section>
+            <div class="container-imgs">
+                <div class="img">
+                    <picture>
+                        <source media="(max-width: 621px)" srcset="images/mobile/image-deep-earth.jpg">
+                        <img src="images/desktop/image-deep-earth.jpg" alt="img-earth">
+                    </picture>
+                </div>
+                <div class="img">
+                    <picture>
+                        <source media="(max-width: 621px)" srcset="images/mobile/image-night-arcade.jpg">
+                        <img src="images/desktop/image-night-arcade.jpg" alt="image-night-arcade">
+                    </picture>
+                </div>
+                <div class="img">
+                    <picture>
+                        <source media="(max-width: 621px)" srcset="images/mobile/image-soccer-team.jpg">
+                        <img src="images/desktop/image-soccer-team.jpg" alt="image-soccer-team">
+                    </picture>
+
+                </div>
+                <div class="img">
+                    <picture>
+                        <source media="(max-width: 621px)" srcset="images/mobile/image-grid.jpg">
+                        <img src="images/desktop/image-grid.jpg" alt="image-grid">
+                    </picture>
+
+                </div>
+                <div class="img">
+                    <picture>
+                        <source media="(max-width: 621px)" srcset="images/mobile/image-from-above.jpg">
+                        <img src="images/desktop/image-from-above.jpg" alt="image-from-above">
+                    </picture>
+
+                </div>
+                <div class="img">
+                    <picture>
+                        <source media="(max-width: 621px)" srcset="images/mobile/image-pocket-borealis.jpg">
+                        <img src="images/desktop/image-pocket-borealis.jpg" alt="image-pocket-borealis">
+                    </picture>
+                    
+                </div>
+                <div class="img">
+                    <picture>
+                        <source media="(max-width: 621px)" srcset="images/mobile/image-curiosity.jpg">
+                        <img src="images/desktop/image-curiosity.jpg" alt="image-curiosity">
+                    </picture>
+                    
+                </div>
+                <div class="img">
+                    <picture>
+                        <source media="(max-width: 621px)" srcset="images/mobile/image-fisheye.jpg">
+                        <img src="images/desktop/image-fisheye.jpg" alt="image-fisheye">
+                    </picture>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="principal">
+            <img src="images/logo.svg" alt="logo">
+            <div class="icones">
+                <a href="#">
+                    <img src="images/icon-facebook.svg" alt="icon-facebook">
+                </a>
+                <a href="#">
+                    <img src="images/icon-twitter.svg" alt="icon-twitter">
+                </a>
+                <a href="#">
+                    <img src="images/icon-pinterest.svg" alt="icon-pinterest">
+                </a>
+                <a href="#">
+                    <img src="images/icon-instagram.svg" alt="icon-instagram">
+
+                </a>
+            </div>
+        </div>
+        <div class="secund">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Products</a></li>
+                 <li><a href="#">Support</a></li>
+                
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    
+    function clique(){
+        lista = document.getElementById('lista')
+        menu = document.getElementById('menu');
+        lista.classList.toggle('livisi')
+        menu.classList.toggle('visible')
+        
+    }
+</script>
